@@ -7,16 +7,24 @@
 
 import SwiftUI
 
+// vstack vertical
+// hstack horizontal
+// zstack fondo
+
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
+        VStack{
+            Text("Hello, world! Myles")
+                .font(.caption2)
             
-            Text("Hello, world!")
+            Text("Hola, Mundo! Myles")
+                .font(.headline)
+            
+            Text("Hola, Mundo! Myles")
+                .font(.largeTitle)
+
         }
-        .padding()
+        
     }
 }
 
