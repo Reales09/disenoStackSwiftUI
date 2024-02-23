@@ -13,17 +13,23 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack{
-            Text("Hello, world! Myles")
-                .font(.caption2)
-            
-            Text("Hola, Mundo! Myles")
-                .font(.headline)
-            
-            Text("Hola, Mundo! Myles")
-                .font(.largeTitle)
-
+        ZStack{
+            Color.blue.edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+            HStack(){
+                Image("car")
+                    .resizable()
+                    .frame(width: 130, height: 100, alignment: .center)
+                
+                VStack(alignment: .leading, spacing: 10){
+                    Text("Maria Ramirez").font(.largeTitle).foregroundColor(.white)
+                        .bold()
+                    Text("Calle 123")
+                        .foregroundColor(.white).font(.title).italic()
+                    
+                }
+            }
         }
+
         
     }
 }
