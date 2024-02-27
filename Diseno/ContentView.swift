@@ -37,6 +37,7 @@ struct compactDesign: View {
                           .resizable()
                       .frame(width: 130, height: 100, alignment: .center)
                       .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
+                    Image(systemName: "person.crop.circle").font(.system(size: 100, weight: .bold)).foregroundColor(.green)
                 }
                 Text("Maria Ramirez")
                     .font(.largeTitle)         .foregroundColor(.white)
