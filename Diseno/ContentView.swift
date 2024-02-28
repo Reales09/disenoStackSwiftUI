@@ -33,10 +33,6 @@ struct compactDesign: View {
             Color.blue.edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
             VStack(){
                 /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Container@*/VStack/*@END_MENU_TOKEN@*/ {
-                    Image("car")
-                          .resizable()
-                      .frame(width: 130, height: 100, alignment: .center)
-                      .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
                     Image(systemName: "person.crop.circle").font(.system(size: 100, weight: .bold)).foregroundColor(.green)
                 }
                 Text("Maria Ramirez")
@@ -46,9 +42,38 @@ struct compactDesign: View {
                     .foregroundColor(.white)
                     .font(.title).italic()
                 
+                HStack{
+                    Button(action:{
+                        
+                    }){
+                        Image(systemName: "message.fill")
+                            .modifier(boton(color: .green))
+                    }
+                    Button(action:{
+                        
+                    }){
+                        Image(systemName: "phone.fill")
+                            .modifier(boton(color: .red))
+
+                    }
+                }
+                
                 
             }
         }
+    }
+}
+
+struct boton: ViewModifier {
+    var color : Color
+    func body(content: Content) -> some View {
+        content
+            .padding()
+            .background(color)
+            .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
+            .foregroundColor(.white)
+            .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+        
     }
 }
 
